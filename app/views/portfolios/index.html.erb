@@ -5,5 +5,5 @@
 	<p><%= single_pf.tittle %></p>
 	<p><%= single_pf.subtitle %></p>
 	<p><%= single_pf.body %></p>
-	<%= image_tag single_pf.thumb_image %>
+	<%= image_tag single_pf.thumb_image unless single_pf.thumb_image.nil? %>
 <% end %>
