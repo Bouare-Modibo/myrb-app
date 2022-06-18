@@ -1,0 +1,9 @@
+<h1>Portfolio Items</h1>
+
+
+<% @pf.each do |single_pf| %>
+	<p><%= single_pf.tittle %></p>
+	<p><%= single_pf.subtitle %></p>
+	<p><%= single_pf.body %></p>
+	<%= image_tag single_pf.thumb_image %>
+<% end %>
