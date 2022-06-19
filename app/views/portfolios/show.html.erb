@@ -1,0 +1,12 @@
+
+<hr >
+	<%= image_tag @single_pf.thumb_image unless @single_pf.thumb_image.nil? %>
+
+	<h1><%= @single_pf.tittle %></h1>
+
+	<em><%= @single_pf.subtitle %></em>
+	<p><%= @single_pf.body %></p>
+	
+	
+	<p><%= link_to "Go Back", edit_portfolio_path(@single_pf.id) %></p>
+<hr >

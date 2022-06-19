@@ -23,7 +23,7 @@ class PortfoliosController < ApplicationController
 			@single_pf = Portfolio.find(params[:id]);
 		end
 		
-		  def update
+		def update
 		  
 			@single_pf = Portfolio.find(params[:id]);
 			
@@ -34,5 +34,9 @@ class PortfoliosController < ApplicationController
 				format.html { render :edit, status: :unprocessable_entity }
 			  end
 			end
-		  end
+		end
+		  
+		def show
+			@single_pf = Portfolio.find(params[:id]);
+		end
 end
