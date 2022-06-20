@@ -7,11 +7,12 @@
 
 <% @pf.each do |single_pf| %>
 	<hr >
-	<h3><%= link_to single_pf.tittle, portfolio_path(single_pf.id) %></h3>
+	<h3><%= link_to single_pf.tittle, portfolio_show_path(single_pf.id) %></h3>
 	<p><%= single_pf.subtitle %></p>
 	<p><%= single_pf.body %></p>
 	<%= image_tag single_pf.thumb_image unless single_pf.thumb_image.nil? %>
 	
 	
 	<p><%= link_to "Edit this Portfolio", edit_portfolio_path(single_pf.id) %></p>
+	<p><%= button_to "Delete this Portfolio", single_pf, method: :delete, data: { confirm: 'Are you sure'} %></p>
 <% end %>
